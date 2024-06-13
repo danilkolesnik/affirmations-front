@@ -1,17 +1,11 @@
-import { StyleSheet, View } from "react-native";
-import Main from "./components/Introduction/Main";
+import "react-native-url-polyfill/auto";
+import { AppNavigator } from "./Navigation";
+import { AuthProvider } from "./provider/auth";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Main />
-    </View>
+    <AuthProvider>
+      <AppNavigator />
+    </AuthProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-  },
-});
