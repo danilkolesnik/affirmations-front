@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native";
-import Introduction from "./components/Introduction";
+import Main from "./components/Introduction/Main";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Introduction />
+      <Main />
     </View>
   );
 }
