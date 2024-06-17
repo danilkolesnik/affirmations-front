@@ -3,6 +3,8 @@ import { Alert, StyleSheet, View, Image, Text, Pressable } from "react-native";
 import { supabase } from "../../lib/supabase";
 import { Button, Input } from "@rneui/themed";
 import { AppleAuth } from "./AppleAuth";
+import { adapty } from 'react-native-adapty';
+import {createPaywallView} from '@adapty/react-native-ui';
 
 export default function Auth() {
   const [email, setEmail] = useState("");
@@ -35,6 +37,24 @@ export default function Auth() {
       Alert.alert("Please check your inbox for email verification!");
     setLoading(false);
   }
+
+  const handleSubscription = async () => {
+    adapty.activate(process.env.EXPO_PUBLIC_ADAPTY);
+
+    const paywall = await adapty.getPaywall(
+      process.env.EXPO_PUBLIC_PUBLIC,
+      "en"
+    );
+    const view = await createPaywallView(paywall);
+
+    view.registerEventHandlers(); // handle close press, etc
+
+    try {
+      await view.present();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -102,6 +122,24 @@ export default function Auth() {
             }}
           >
             Зарегистрироваться
+          </Text>
+        </Pressable>
+        <Pressable
+          style={{ backgroundColor: "#000", height: 50, borderRadius: 15 }}
+          title="Buy Pro"
+          disabled={loading}
+          onPress={() => handleSubscription()}
+        >
+          <Text
+            style={{
+              color: "#FFF",
+              textAlign: "center",
+              fontSize: 18,
+              fontWeight: 600,
+              lineHeight: 51,
+            }}
+          >
+            Buy pro
           </Text>
         </Pressable>
       </View>
