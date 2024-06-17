@@ -5,6 +5,7 @@ import axios from "axios";
 export default function ChooseTopics({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  // TODO: refactor to useQuery, create function similar useSubscription
   const getTopics = () => {
     const url = `https://sigma.slan.studio/api/themes`;
     axios
