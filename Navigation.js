@@ -8,6 +8,8 @@ import Auth from "./components/Auth/Auth";
 import GreetingsScreen from "./components/Introduction/Greetings";
 import GetNameScreen from "./components/Introduction/GetName";
 import NotificationsScreen from "./components/Introduction/NotificationScreen";
+import ChooseTopics from "./components/Home/ChooseTopics";
+import Home from "./components/Home/Home";
 import { supabase } from "./lib/supabase";
 
 const Stack = createNativeStackNavigator();
@@ -47,6 +49,8 @@ const AppNavigator = () => {
                 name="Notifications"
                 component={NotificationsScreen}
               />
+              <Stack.Screen name="ChooseTopics" component={ChooseTopics} />
+              <Stack.Screen name="Home" component={Home} />
             </>
           ) : (
             <>

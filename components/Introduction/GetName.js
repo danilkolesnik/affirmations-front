@@ -19,6 +19,7 @@ export default function GetNameScreen({ navigation }) {
         <View
           style={{
             padding: 20,
+            paddingBottom: 30,
             height: "100%",
             width: "100%",
             display: "flex",
