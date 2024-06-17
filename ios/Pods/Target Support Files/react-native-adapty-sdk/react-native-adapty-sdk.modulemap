@@ -1,0 +1,6 @@
+module react_native_adapty_sdk {
+  umbrella header "react-native-adapty-sdk-umbrella.h"
+
+  export *
+  module * { export * }
+}

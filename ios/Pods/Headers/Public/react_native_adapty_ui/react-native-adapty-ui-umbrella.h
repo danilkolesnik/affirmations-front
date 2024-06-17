@@ -1,0 +1,1 @@
+../../../Target Support Files/react-native-adapty-ui/react-native-adapty-ui-umbrella.h

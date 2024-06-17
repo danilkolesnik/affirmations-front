@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-adapty/lib/ios/RNAdapty-Bridging-Header.h

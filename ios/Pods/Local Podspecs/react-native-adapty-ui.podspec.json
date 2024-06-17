@@ -1,0 +1,30 @@
+{
+  "name": "react-native-adapty-ui",
+  "version": "2.11.0",
+  "summary": "Extension to the Adapty SDK that allows you to easily add purchase screens to your application.",
+  "homepage": "https://github.com/adaptyteam/AdaptyUI-React-Native#readme",
+  "license": "MIT",
+  "authors": "Vanya Dorofeyev <DivanDoesApps@gmail.com> (https://github.com/divanc)",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source": {
+    "git": "https://github.com/adaptyteam/AdaptyUI-React-Native.git",
+    "tag": "2.11.0"
+  },
+  "source_files": "ios/**/*.{h,m,mm,swift}",
+  "dependencies": {
+    "AdaptyUI": [
+      "2.11.2"
+    ],
+    "React-Core": [
+
+    ],
+    "Adapty": [
+      ">= 2.11.0"
+    ],
+    "react-native-adapty-sdk": [
+      ">= 2.11.0"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+module react_native_adapty_ui {
+  umbrella header "react-native-adapty-ui-umbrella.h"
+
+  export *
+  module * { export * }
+}

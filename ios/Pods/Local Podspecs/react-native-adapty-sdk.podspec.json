@@ -1,0 +1,32 @@
+{
+  "name": "react-native-adapty-sdk",
+  "version": "2.11.0",
+  "summary": "Adapty React Native SDK",
+  "description": "Pod for @adapty/react-native-sdk (previously react-native-adapty)",
+  "homepage": "https://github.com/adaptyteam/AdaptySDK-React-Native",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ivan Dorofeyev": "divandoesapps@gmail.com"
+  },
+  "platforms": {
+    "ios": "12.2"
+  },
+  "source": {
+    "git": "https://github.com/adaptyteam/AdaptySDK-React-Native.git",
+    "tag": "2.11.0"
+  },
+  "source_files": "lib/ios/**/*.{h,c,m,swift}",
+  "resources": "lib/ios/**/*.{plist}",
+  "requires_arc": true,
+  "dependencies": {
+    "Adapty": [
+      "2.11.0"
+    ],
+    "React": [
+
+    ]
+  }
+}

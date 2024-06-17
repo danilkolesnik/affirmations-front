@@ -1,0 +1,1 @@
+../../../Target Support Files/AdaptyUI/AdaptyUI-umbrella.h
