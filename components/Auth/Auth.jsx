@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, StyleSheet, View } from "react-native";
+import { Alert, StyleSheet, View, Image, Text, Pressable } from "react-native";
 import { supabase } from "../../lib/supabase";
 import { Button, Input } from "@rneui/themed";
 import { AppleAuth } from "./AppleAuth";
@@ -38,6 +38,10 @@ export default function Auth() {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={require("../../assets/images/giga-round.png")}
+        style={{ width: 80, height: 80, alignSelf: "center" }}
+      ></Image>
       <View style={[styles.verticallySpaced, styles.mt20]}>
         <Input
           style={{ color: "#FFF", paddingLeft: 9 }}
@@ -62,22 +66,58 @@ export default function Auth() {
         />
       </View>
       <View style={[styles.verticallySpaced, styles.mt20]}>
-        <Button
-          color="#131313"
+        <Pressable
+          style={{ backgroundColor: "#000", height: 50, borderRadius: 15 }}
           title="Войти"
           disabled={loading}
           onPress={() => signInWithEmail()}
-        />
+        >
+          <Text
+            style={{
+              color: "#FFF",
+              textAlign: "center",
+              fontSize: 18,
+              fontWeight: 600,
+              lineHeight: 51,
+            }}
+          >
+            Войти
+          </Text>
+        </Pressable>
       </View>
       <View style={styles.verticallySpaced}>
-        <Button
-          color="#131313"
+        <Pressable
+          style={{ backgroundColor: "#000", height: 50, borderRadius: 15 }}
           title="Зарегистрироваться"
           disabled={loading}
           onPress={() => signUpWithEmail()}
-        />
+        >
+          <Text
+            style={{
+              color: "#FFF",
+              textAlign: "center",
+              fontSize: 18,
+              fontWeight: 600,
+              lineHeight: 51,
+            }}
+          >
+            Зарегистрироваться
+          </Text>
+        </Pressable>
       </View>
-      <View style={styles.verticallySpaced}>
+      <Text
+        style={{
+          textAlign: "center",
+          color: "#FFF",
+          padding: 10,
+          fontWeight: 600,
+        }}
+      >
+        Или
+      </Text>
+      <View
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      >
         <AppleAuth />
       </View>
     </View>

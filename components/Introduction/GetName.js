@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 export default function GetNameScreen({ navigation }) {
-  const [value, onChangeText] = React.useState("Твоё имя");
+  const [value, onChangeText] = React.useState("Твоё имя...");
 
   return (
     <ImageBackground
@@ -18,7 +18,7 @@ export default function GetNameScreen({ navigation }) {
       <View style={{ flex: 1 }}>
         <View
           style={{
-            padding: "20px",
+            padding: 20,
             height: "100%",
             width: "100%",
             display: "flex",
@@ -32,6 +32,7 @@ export default function GetNameScreen({ navigation }) {
             style={{
               display: "flex",
               flexDirection: "column",
+              gap: 12,
               marginTop: "30px",
             }}
           >
@@ -57,14 +58,14 @@ export default function GetNameScreen({ navigation }) {
               value={value}
               style={{
                 // padding: "5px",
-                paddingLeft: "15px",
+                paddingLeft: 15,
                 color: "#B1B1B1",
                 backgroundColor: "#161616",
                 fontWeight: "400",
-                height: "47px",
-                marginTop: "20px",
                 borderRadius: "20px",
-                lineHeight: "47px",
+                // height: 15,
+                paddingTop: 17,
+                paddingBottom: 17,
               }}
             />
           </View>

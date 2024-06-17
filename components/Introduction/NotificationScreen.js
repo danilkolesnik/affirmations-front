@@ -13,7 +13,7 @@ export default function NotificationsScreen({ navigation }) {
       <View style={{ flex: 1 }}>
         <View
           style={{
-            padding: "20px",
+            padding: 20,
             height: "100%",
             width: "100%",
             display: "flex",
@@ -27,6 +27,7 @@ export default function NotificationsScreen({ navigation }) {
             style={{
               display: "flex",
               flexDirection: "column",
+              gap: 15,
               marginTop: "30px",
             }}
           >
@@ -44,7 +45,7 @@ export default function NotificationsScreen({ navigation }) {
               С ежедневными уведомлениями твоя мотивация достигнет предела!
             </Text>
 
-            <View style={{ marginTop: "25px" }}>
+            <View style={{ marginTop: "25px", display: "flex", flexDirection: "column", gap: 8 }}>
               <View
                 style={{
                   // padding: "5px",
@@ -52,6 +53,8 @@ export default function NotificationsScreen({ navigation }) {
                   height: "55px",
                   marginTop: "10px",
                   borderRadius: "20px",
+                  paddingLeft: 15,
+                  paddingRight: 15,
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "nowrap",
@@ -99,6 +102,8 @@ export default function NotificationsScreen({ navigation }) {
                   // padding: "5px",
                   backgroundColor: "#161616",
                   height: "55px",
+                  paddingLeft: 15,
+                  paddingRight: 15,
                   marginTop: "10px",
                   borderRadius: "20px",
                   display: "flex",
@@ -142,10 +147,10 @@ export default function NotificationsScreen({ navigation }) {
                         setNotificationValue(notificationValue - 1);
                       }
                     }}
+                    style={{ paddingLeft: 15, paddingRight: 15}}
                   >
-                    <Image
-                      source={require("../../assets/icons/minus.svg")}
-                    ></Image>
+                    <Text style={{ fontSize: 23, color: "#636363", 
+                      fontWeight: "700", textAlign: "center"}}>-</Text>
                   </Pressable>
                   <Text
                     style={{
@@ -161,9 +166,8 @@ export default function NotificationsScreen({ navigation }) {
                   <Pressable
                     onPress={() => setNotificationValue(notificationValue + 1)}
                   >
-                    <Image
-                      source={require("../../assets/icons/plus.svg")}
-                    ></Image>
+                    <Text style={{ fontSize: 18, color: "#636363", 
+                      fontWeight: "700", textAlign: "center"}}>+</Text>
                   </Pressable>
                 </View>
               </View>
@@ -174,6 +178,8 @@ export default function NotificationsScreen({ navigation }) {
                   backgroundColor: "#161616",
                   height: "55px",
                   marginTop: "10px",
+                  paddingLeft: 15,
+                  paddingRight: 15,
                   borderRadius: "20px",
                   display: "flex",
                   flexDirection: "row",

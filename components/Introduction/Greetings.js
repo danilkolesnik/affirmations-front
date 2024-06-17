@@ -10,7 +10,7 @@ export default function GreetingsScreen({ navigation }) {
       <View style={{ flex: 1 }}>
         <View
           style={{
-            padding: "20px",
+            padding: 15,
             height: "100%",
             width: "100%",
             display: "flex",
@@ -35,7 +35,7 @@ export default function GreetingsScreen({ navigation }) {
                 color: "#C9C9C9",
                 fontSize: "16px",
                 fontWeight: 600,
-                marginTop: "20px",
+                marginTop: 20,
               }}
             >
               Готов погрузиться в мир аффирмаций и стать лучшей версией себя?
