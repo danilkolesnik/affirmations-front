@@ -11,6 +11,7 @@ export default function GreetingsScreen({ navigation }) {
         <View
           style={{
             padding: 15,
+            paddingBottom: 30,
             height: "100%",
             width: "100%",
             display: "flex",

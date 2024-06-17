@@ -2,7 +2,6 @@ import React from "react";
 import { ImageBackground, View, Text, Pressable, Image } from "react-native";
 
 export default function NotificationsScreen({ navigation }) {
-
   const [notificationValue, setNotificationValue] = React.useState(2);
 
   return (
@@ -14,6 +13,7 @@ export default function NotificationsScreen({ navigation }) {
         <View
           style={{
             padding: 20,
+            paddingBottom: 30,
             height: "100%",
             width: "100%",
             display: "flex",
@@ -45,7 +45,14 @@ export default function NotificationsScreen({ navigation }) {
               С ежедневными уведомлениями твоя мотивация достигнет предела!
             </Text>
 
-            <View style={{ marginTop: "25px", display: "flex", flexDirection: "column", gap: 8 }}>
+            <View
+              style={{
+                marginTop: "25px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 8,
+              }}
+            >
               <View
                 style={{
                   // padding: "5px",
@@ -78,9 +85,9 @@ export default function NotificationsScreen({ navigation }) {
                   style={{
                     marginRight: "18px",
                     backgroundColor: "#0C0C0C",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
-                    width: "110px",
+                    paddingTop: 5,
+                    paddingBottom: 5,
+                    width: 110,
                     borderRadius: "10px",
                   }}
                 >
@@ -127,18 +134,15 @@ export default function NotificationsScreen({ navigation }) {
 
                 <View
                   style={{
-                    marginRight: "18px",
+                    paddingTop: 5,
+                    paddingBottom: 5,
                     backgroundColor: "#0C0C0C",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
-                    width: "110px",
-                    paddingLeft: "10px",
-                    paddingRight: "10px",
+                    width: 110,
                     borderRadius: "10px",
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-between",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <Pressable
@@ -147,10 +151,17 @@ export default function NotificationsScreen({ navigation }) {
                         setNotificationValue(notificationValue - 1);
                       }
                     }}
-                    style={{ paddingLeft: 15, paddingRight: 15}}
+                    style={{ paddingLeft: 15, paddingRight: 15 }}
                   >
-                    <Text style={{ fontSize: 23, color: "#636363", 
-                      fontWeight: "700", textAlign: "center"}}>-</Text>
+                    <Text
+                      style={{
+                        fontSize: 23,
+                        color: "#636363",
+                        fontWeight: "700",
+                      }}
+                    >
+                      -
+                    </Text>
                   </Pressable>
                   <Text
                     style={{
@@ -162,19 +173,25 @@ export default function NotificationsScreen({ navigation }) {
                   >
                     {notificationValue}
                   </Text>
-
                   <Pressable
                     onPress={() => setNotificationValue(notificationValue + 1)}
+                    style={{ paddingLeft: 15, paddingRight: 15 }}
                   >
-                    <Text style={{ fontSize: 18, color: "#636363", 
-                      fontWeight: "700", textAlign: "center"}}>+</Text>
+                    <Text
+                      style={{
+                        fontSize: 18,
+                        color: "#636363",
+                        fontWeight: "700",
+                      }}
+                    >
+                      +
+                    </Text>
                   </Pressable>
                 </View>
               </View>
 
               <View
                 style={{
-                  // padding: "5px",
                   backgroundColor: "#161616",
                   height: "55px",
                   marginTop: "10px",
@@ -202,11 +219,11 @@ export default function NotificationsScreen({ navigation }) {
 
                 <View
                   style={{
+                    paddingTop: 5,
+                    paddingBottom: 5,
                     marginRight: "18px",
                     backgroundColor: "#0C0C0C",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
-                    width: "110px",
+                    width: 110,
                     borderRadius: "10px",
                   }}
                 >
@@ -233,7 +250,7 @@ export default function NotificationsScreen({ navigation }) {
               borderRadius: "20px",
             }}
             title="Продолжить"
-            onPress={() => navigation.navigate("GetName")}
+            onPress={() => navigation.navigate("ChooseTopics")}
           >
             <Text
               style={{
