@@ -14,6 +14,7 @@ import { AppleAuth } from "./AppleAuth";
 import { adapty } from "react-native-adapty";
 import { createPaywallView } from "@adapty/react-native-ui";
 import SubscriptionScreen from "../Common/subscriptionButton";
+import SubscriptionNotifyScreen from "../Common/subscriptionNotify";
 
 export default function Auth() {
   const [email, setEmail] = useState("");
@@ -116,7 +117,9 @@ export default function Auth() {
           </Text>
         </Pressable>
         <SafeAreaView style={{ flex: 1 }}>
+          {/* TODO: move this components */}
           <SubscriptionScreen customerId={'5'} />
+          <SubscriptionNotifyScreen customerId={'5'} />
         </SafeAreaView>
       </View>
       <Text
